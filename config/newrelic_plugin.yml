@@ -17,5 +17,5 @@ newrelic:
 #
 agents:
   # this is where configuration for agents belongs
-  example:
+  postfix:
     hertz: 1000
