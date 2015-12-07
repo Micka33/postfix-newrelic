@@ -17,11 +17,16 @@ Download the [latest release](https://github.com/Micka33/postfix-newrelic/releas
 wget https://github.com/Micka33/postfix-newrelic/archive/vX.tar.gz
 unzip vX.tar.gz
 cd postfix-newrelic-master
+```
+Install the plugin dependencies.
+```
 bundle install
-bundle exec ./newrelic_postfix_agent
 ```
 
 Edit `config/newrelic_plugin.yml` and replace "YOUR_LICENSE_KEY_HERE" with your licence key.
 
-Run `bundle exec ./newrelic_postfix_agent`
+Run it.
+```
+bundle exec ./newrelic_postfix_agent
+```
 
