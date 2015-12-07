@@ -11,7 +11,7 @@ require "bundler/setup"
 
 require "newrelic_plugin"
 
-module ExampleAgent
+module PostfixAgent
 
   class Agent < NewRelic::Plugin::Agent::Base
 
@@ -55,11 +55,11 @@ module ExampleAgent
 
   #
   # Register this agent with the component.
-  # The ExampleAgent is the name of the module that defines this
+  # The PostfixAgent is the name of the module that defines this
   # driver (the module must contain at least three classes - a
   # PollCycle, a Metric and an Agent class, as defined above).
   #
-  NewRelic::Plugin::Setup.install_agent :example, ExampleAgent
+  NewRelic::Plugin::Setup.install_agent :postfix, PostfixAgent
 
   #
   # Launch the agent; this never returns.
