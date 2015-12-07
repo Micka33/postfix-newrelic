@@ -1,9 +1,32 @@
-## Example Agent Install
+# Postfix newrelic
 
-1. Download the latest tagged version from `https://github.com/newrelic-platform/newrelic_example_plugin/tags`
-2. Extract to the location you want to run the example agent from
-3. Copy `config/template_newrelic_plugin.yml` to `config/newrelic_plugin.yml`
-4. Edit `config/newrelic_plugin.yml` and replace "YOUR_LICENSE_KEY_HERE" with your New Relic license key
-5. Create a plugin in New Relic
-6. Edit `newrelic_example_agent` and replace "PUT YOUR GUID HERE" with the GUID that was generated when you created the plugin
-7. run `./newrelic_example_agent`
+## Prerequisites
+
+| Compatibility for...	| Requirements |
+|-----------------------|--------------|
+| Ruby                  | 1.8.7 (including REE), 1.9.2, 1.9.3, 2.0.0, and 2.1.0; JRuby 1.6 and above; Rubinius 2.x |
+| OS                    | UNIX-like operating systems such as Linux, Solaris, Mac OS X |
+| Security requirements | As a standard security measure for data collection, your app server must support SHA-2 (256-bit). SHA-1 is not supported. |
+
+
+## Installation and Running
+
+Download the [latest release](https://github.com/Micka33/postfix-newrelic/releases/latest)
+
+```
+wget https://github.com/Micka33/postfix-newrelic/archive/vX.tar.gz
+unzip vX.tar.gz
+cd postfix-newrelic-master
+```
+Install the plugin dependencies.
+```
+bundle install
+```
+
+Edit `config/newrelic_plugin.yml` and replace "YOUR_LICENSE_KEY_HERE" with your licence key.
+
+Run it.
+```
+bundle exec ./newrelic_postfix_agent
+```
+
