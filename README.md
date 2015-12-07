@@ -14,8 +14,8 @@
 Download the [latest release](https://github.com/Micka33/postfix-newrelic/releases/latest)
 
 ```
-wget https://github.com/Micka33/postfix-newrelic/archive/vX.X.tar.gz
-unzip vX.X.tar.gz
+wget https://github.com/Micka33/postfix-newrelic/archive/vX.tar.gz
+unzip vX.tar.gz
 cd postfix-newrelic-master
 bundle install
 bundle exec ./newrelic_postfix_agent
