@@ -25,7 +25,7 @@ module PostfixAgent
       begin
         sub_level_folders = ['deferred']
         has_sub_folders = sub_level_folders.include?(folder)
-        value = Dir.entries("#{@directory}/#{folder}/*").reject{|q| ['.', '..'].include?(q) }.count unless has_sub_folders
+        value = Dir.glob("#{@directory}/#{folder}/*").reject{|q| ['.', '..'].include?(q) }.count unless has_sub_folders
         value = Dir.glob("#{@directory}/#{folder}/*/*").reject{|q| ['.', '..'].include?(q) }.count if has_sub_folders
       rescue Errno::EACCES => e
         puts e
