@@ -30,3 +30,10 @@ Run it.
 bundle exec ./newrelic_postfix_agent
 ```
 
+## How it works
+
+This plugin periodically check the postfix folders.  
+It is not an event driven plugin so it might easily miss some mails.  
+It's use is most intended to monitor the different queues to spot problems.  
+You will need to run it with the appropriate privileges so it can access the postfix folders.
+
